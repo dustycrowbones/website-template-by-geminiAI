@@ -1,0 +1,231 @@
+/* General WebKit scrollbar styles (Chrome, Edge, Safari...) */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust scrollbar width */
+    background-color: #35333D; /* Set background color */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #997080; /* Set thumb color */
+    border-radius: 8px; /* Round the corners */
+}
+
+
+body {
+    margin: 0;
+    background-color: #131316;
+    color: #f8f9fa; 
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+}
+
+/* Navbar */
+nav {
+    background-color: #6F5B71;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    transition: top 0.3s; 
+}
+
+nav .logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 800; /* Semi-bold for visibility */
+    color: #f8f9fa; /* Earthy green */
+    padding-left: 10%;
+}
+
+nav ul {
+    list-style: none;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    padding-right: 10%;
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Vertically align buttons */
+}
+
+nav li { /* Apply to list items containing links */
+    margin-left: 20px; /* Add spacing between buttons */ 
+
+}
+
+nav a {
+    color: #f8f9fa; 
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 12px; /* Add padding to buttons */
+    border-radius: 5px; 
+}
+
+nav a:hover {
+    background-color: #997080;
+} 
+
+/* Sections */
+section {
+    padding: 100px 20px;
+    text-align: center; 
+    min-height: 600px; /* Ensure minimum height */ 
+}
+
+.container { 
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: left; /* Align text in sections to the left */
+    justify-content: center;
+}
+
+section h2 {
+    font-weight: 600; /* Semi-bold headings */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-weight: 300; /* Light font weight */
+    line-height: 1.6;
+}
+
+/* About Us */
+#about {
+    background-color: #35333D;
+    display: flex; /* For image and text side-by-side */
+    align-items: center;
+    justify-content: space-around; 
+}
+
+.about-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; /* For smooth zoom */
+    cursor: zoom-in;
+}
+
+.about-image-container {
+    position: relative; /* Allows for absolute positioning of zoom overlay */ 
+    overflow: hidden; /* Prevents zoomed image from spilling out */
+}
+
+.about-image-container.zoom-active .about-image {
+    transform: scale(2); /* Zoom in the image (adjust as needed) */
+    cursor: zoom-out; /* Indicate the ability to zoom out*/
+}
+
+/* Products */
+#products {
+    background-color: #24232A; 
+}
+
+.product-grid {
+   display: grid;
+   grid-template-columns: repeat(6, 1fr); /* 6 products per row */
+   gap: 20px;
+}
+
+.product-card {
+    background-color: #F2F3F5;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-image-container {
+    position: relative; /* Allows for absolute positioning of zoom overlay */ 
+    overflow: hidden; /* Prevents zoomed image from spilling out */
+}
+
+.product-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; /* For smooth zoom */
+    cursor: zoom-in;
+}
+
+.product-image-container.zoom-active .product-image {
+    transform: scale(2); /* Zoom in the image (adjust as needed) */
+    cursor: zoom-out; /* Indicate the ability to zoom out*/
+}
+
+/* Zoomed Image */
+.zoomed-image {
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2); /* Center and zoom */
+    max-width: 40vw; /* Limit width to avoid being too large */
+    max-height: 40vh;
+    background-color: white; /* Background for better visibility */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Add a shadow */
+    border-radius: 8px;
+    z-index: 10; /* Ensure on top */
+    display: none; /* Initially hidden */
+}
+
+.product-card img {
+    padding: 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.product-name {
+    font-weight: 400; /* Normal font weight */
+    color: black;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-weight: 300; /* Extra light price */
+    color: black;
+    font-size: 1.2em;
+}
+
+.in-stock {
+    color: green; /* Indicate in-stock status */
+}
+
+/* Contact Us */
+#contact {
+    background-color: #131316;
+    flex: auto;
+    flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+#contact-form button {
+    background-color: #6F5B71;
+    color: #f8f9fa;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+#contact-form button:hover {
+    background-color: #997080;
+}
