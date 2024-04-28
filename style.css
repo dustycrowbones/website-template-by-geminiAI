@@ -106,6 +106,7 @@ section p {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
+    padding: 1%;
     transition: transform 0.3s ease; /* For smooth zoom */
     cursor: zoom-in;
 }
@@ -206,9 +207,14 @@ section p {
     flex-direction: column;
 }
 
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
 #contact-form input,
 #contact-form textarea {
-    width: 50%;
+    width: 35%;
     padding: 12px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -216,7 +222,13 @@ section p {
     box-sizing: border-box;
 }
 
+#contact-form textarea {
+    height: 200px;
+    resize: vertical;
+}
+
 #contact-form button {
+    width: 15%;
     background-color: #6F5B71;
     color: #f8f9fa;
     border: none;
