@@ -72,7 +72,9 @@ _______________________________________________________________________
 
 prompt for "about us":
 
-        Write me a text for About Us section of a small business that  makes sustainable jewellery out of recycled silver and sea glass. Use Ada for name and Precious Waves for company name. 
+        Write me a text for About Us section of a environmentally concious small business that  makes sustainable jewellery out of recycled silver and sea glass. Use Ada and Jen for name and Precious Waves for company name. 
+        Ada and Jen are sisters, include that in context. Jewellery is handmade, include that in context.
+        Emphasis on quality of products.
 
 _______________________________________________________________________
 _______________________________________________________________________
